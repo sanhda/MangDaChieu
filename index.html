@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang Da Chieu</title>
+</head>
+<body>
+
+<script>
+    let arr = [
+        [2,3,5],
+        [4,6,8],
+        [3,5,7]
+    ]
+
+    // tong cac phan tu 2 chieu
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            sum += arr[i][j]
+        }
+    }
+    console.log(`Tổng các phần tử 2 chiều là ${sum}`)
+
+    // tong cac phan tu cua tung hang
+    for (let i = 0; i < arr.length; i++) {
+        sum = 0;
+        for (let j = 0; j < arr[i].length; j++) {
+            sum += arr[i][j]
+        }
+        console.log(`Tổng các phần tử của hàng ${i} là ${sum}`)
+    }
+
+    // phan tu lon nhat cua tung hang
+    let max = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        max = arr[i][0];
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j]>max) {
+                max = arr[i][j];
+            }
+        }
+        console.log(`Phần tử lớn nhất của hàng ${i} là ${max}`)
+    }
+
+    // phan tu lon nhat cua tung cot
+    for (let i = 0; i < arr.length; i++) {
+        max = arr[i][0];
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j]>max) {
+                max = arr[i][j];
+            }
+        }
+        console.log(`Phần tử lớn nhất của hàng ${i} là ${max}`)
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2</title>
+</head>
+<body>
+
+<script>
+
+    //bai 1
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+
+    for (let i = 0; i < a.length; i++) {
+        console.log(`row ${i}`)
+        for (let j = 0; j < a[i].length; j++) {
+            console.log(a[i][j])
+        }
+    }
+
+    //bai2
+    let b = ['c', 's', 'c', '2', '6', '1'];
+    let chars = '';
+    b.reverse().forEach((char) => chars += char);
+    console.log(chars);
+
+    //bai3
+    let c = ['char', 'c', 2, 'gf', 'hello', 'hi', 12, 15, 1780]
+    let count = 0;
+    for (let i = 0; i < c.length; i++) {
+        count += c[i].toString().length;
+    }
+    console.log(`Có ${count} ký tự trong mảng`)
+
+    //bai4
+    count = 0;
+    for (let i = 0; i < c.length; i++) {
+        if (c[i].toString() === c[i]) {
+            count += 1
+        }
+    }
+    console.log(`Có ${count} từ trong mảng`)
+
+    //bai5
+    let d1 = [1, 2, 3]
+    let d2 = [1, 2, 3]
+    let isSame = true;
+
+    if (d1.length !== d2.length) {
+        isSame = false;
+    } else {
+        for (let i = 0; i < d1.length; i++) {
+            if (d1[i] !== d2[i]) {
+                isSame = false;
+                break;
+            }
+        }
+    }
+
+    if (isSame) {
+        console.log('2 mảng giống nhau')
+    } else {
+        console.log('2 mảng không giống nhau')
+    }
+
+    //bai6
+    let e = ['dsa', 'dsa-ewq', 'ewq', -20, '-', '-dsadads-ewqdsaewq-']
+    for (let i = 0; i < e.length; i++) {
+        if (e[i].toString() !== e[i]) {continue;}
+
+        e[i] = e[i].replaceAll('-', '_');
+    }
+    console.log(e)
+
+
+</script>
+</body>
+</html>
